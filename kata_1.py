@@ -15,5 +15,19 @@ def make_negative(number):
 def bool_to_word(boolean):
     return "Yes" if boolean else "No"
 
-boolean = True
-print(bool_to_word(boolean))
+# boolean = True
+# print(bool_to_word(boolean))
+
+#kata #3 - https://www.codewars.com/kata/5208f99aee097e6552000148/train/python
+
+def solution(s):
+    words = []
+    for char in s:
+        if char.isupper():
+            if len(words) > 0:
+                words.append(' ')
+        words.append(char)
+    return ''.join(words)
+
+# print(solution("CamelCasing"))
+
